@@ -51,7 +51,7 @@ class StorePage extends StatelessWidget {
             Expanded(
                 child:
                     Image.asset("assets/images/bag.jpeg", fit: BoxFit.cover)),
-            SizedBox(height: 2),
+            const SizedBox(height: 2),
             Expanded(
                 child:
                     Image.asset("assets/images/cloth.jpeg", fit: BoxFit.cover)),
