@@ -18,9 +18,41 @@ class MyApp extends StatelessWidget {
     // Material app 을 호출한다(내부에 편리한 기능들이 너무 많이 있다)
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Container(
-        color: Colors.grey,
-        child: Text("Hello Flutter"),
+      home: StorePage(),
+    );
+  }
+} // end of MyApp
+
+// stl 자동완성 해보기
+class StorePage extends StatelessWidget {
+  const StorePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // 시각적 layout 틀을 잡아주는 component widget!
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Row(
+                children: [
+                  Text("Woman", style: TextStyle(fontWeight: FontWeight.bold)),
+                  Spacer(),
+                  Text("Kids", style: TextStyle(fontWeight: FontWeight.bold)),
+                  Spacer(),
+                  Text("Shoes", style: TextStyle(fontWeight: FontWeight.bold)),
+                  Spacer(),
+                  Text("Bag", style: TextStyle(fontWeight: FontWeight.bold)),
+                ],
+              ),
+            ),
+            Container(
+              color: Colors.amber,
+            )
+          ],
+        ),
       ),
     );
   }
